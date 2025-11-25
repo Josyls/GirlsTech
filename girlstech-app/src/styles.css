@@ -1,0 +1,163 @@
+/* styles.css */
+
+/* Definição da Paleta de Cores */
+:root {
+    --pink-vibrante: #E94D8A; /* Botões e Títulos Principais */
+    --rosa-suave: #FCE4EC; /* Fundo Secundário */
+    --preto-tech: #1E1E1E; /* Texto Principal */
+    --amarelo-destaque: #FFC72C; /* Detalhes e Badges */
+    --branco: #FFFFFF;
+}
+
+/* Base e Tipografia */
+body {
+    font-family: 'Poppins', sans-serif; /* Certifique-se de importar esta fonte via index.html ou index.css */
+    margin: 0;
+    padding: 0;
+    background-color: var(--branco);
+    color: var(--preto-tech);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Animação Pulsar para o CTA Flutuante */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(233, 77, 138, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(233, 77, 138, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(233, 77, 138, 0); }
+}
+
+/* 🚨 ESTILO DA CTA FLUTUANTE (MUITA VISIBILIDADE) */
+#cta-sticky {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 1.1em;
+    font-weight: 800;
+    background-color: var(--pink-vibrante);
+    color: var(--branco);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+    animation: pulse 1.5s infinite; /* Efeito de pulsar */
+}
+
+#cta-sticky:hover {
+    background-color: #D83C79;
+    transform: scale(1.05); /* Efeito de aumento no hover */
+}
+
+/* Estilos Gerais de Botão e Links */
+.cta-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: var(--pink-vibrante);
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background-color: #D83C79;
+    transform: translateY(-2px);
+}
+
+.link-cta {
+    color: var(--pink-vibrante);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* 1. Estilo do Hero */
+.hero {
+    background-color: var(--rosa-suave);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.badge-gratuito {
+    display: inline-block;
+    background-color: var(--amarelo-destaque);
+    color: var(--preto-tech);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.headline {
+    font-size: 2.8em;
+    color: var(--pink-vibrante);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+/* 2. Seção Problema - Padrão da Logo (Quadriculado Suave) */
+.problema {
+    padding: 60px 0;
+    /* Padrão Xadrez Rosa/Branco */
+    background-image: linear-gradient(45deg, var(--branco) 25%, transparent 25%), 
+                      linear-gradient(-45deg, var(--branco) 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, var(--rosa-suave) 75%), 
+                      linear-gradient(-45deg, transparent 75%, var(--rosa-suave) 75%);
+    background-size: 20px 20px;
+    background-color: var(--branco);
+}
+
+/* 3. Seção Benefícios */
+.beneficios {
+    padding: 60px 0;
+    background-color: var(--rosa-suave);
+}
+
+.cards-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--branco);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--amarelo-destaque);
+    transition: transform 0.1s ease-out; /* Para o efeito de flutuação */
+}
+
+.card h3 {
+    color: var(--preto-tech);
+    font-size: 1.3em;
+}
+
+/* 4. CTA Final */
+.cta-final {
+    text-align: center;
+    padding: 60px 0;
+    background-color: var(--amarelo-destaque);
+    color: var(--preto-tech);
+}
+
+.final-cta {
+    background-color: var(--preto-tech);
+    color: var(--branco);
+}
+
+.final-cta:hover {
+    background-color: #333;
+}
