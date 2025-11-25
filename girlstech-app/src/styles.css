@@ -1,4 +1,4 @@
-/* styles.css */
+/* src/styles.css */
 
 /* Definição da Paleta de Cores */
 :root {
@@ -11,7 +11,8 @@
 
 /* Base e Tipografia */
 body {
-    font-family: 'Poppins', sans-serif; /* Certifique-se de importar esta fonte via index.html ou index.css */
+    /* Certifique-se de que a fonte Poppins está importada no seu index.html */
+    font-family: 'Poppins', sans-serif; 
     margin: 0;
     padding: 0;
     background-color: var(--branco);
@@ -32,7 +33,7 @@ body {
     100% { box-shadow: 0 0 0 0 rgba(233, 77, 138, 0); }
 }
 
-/* 🚨 ESTILO DA CTA FLUTUANTE (MUITA VISIBILIDADE) */
+/* 🚨 ESTILO DA CTA FLUTUANTE */
 #cta-sticky {
     position: fixed;
     bottom: 20px;
@@ -49,8 +50,8 @@ body {
 }
 
 #cta-sticky:hover {
-    background-color: #D83C79;
-    transform: scale(1.05); /* Efeito de aumento no hover */
+    background-color: #D83C79; 
+    transform: scale(1.05); 
 }
 
 /* Estilos Gerais de Botão e Links */
@@ -137,12 +138,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     border-left: 5px solid var(--amarelo-destaque);
-    transition: transform 0.1s ease-out; /* Para o efeito de flutuação */
-}
-
-.card h3 {
-    color: var(--preto-tech);
-    font-size: 1.3em;
+    transition: transform 0.1s ease-out; 
 }
 
 /* 4. CTA Final */
