@@ -2,8 +2,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// O Vercel precisa que o base seja a raiz
 export default defineConfig({
   plugins: [react()],
+  // Define o caminho base para que o Vercel/GitHub Pages encontre os assets
   base: '/', 
 })
