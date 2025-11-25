@@ -4,8 +4,8 @@
   "description": "Landing Page Girls Tech em React com Vite",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",             
-    "build": "vite build",
+    "dev": "vite",
+    "build": "npx vite build --base /",  <-- NOVO COMANDO
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1" 
   },
