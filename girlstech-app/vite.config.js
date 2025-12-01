@@ -1,10 +1,7 @@
-// vite.config.js (USANDO MODULE.EXPORTS)
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-const { defineConfig } = require('vite');
-const react = require('@vitejs/plugin-react');
-
-// Use module.exports para compatibilidade com o ambiente Vercel/CJS
-module.exports = defineConfig({
+// https://vite.dev/config/
+export default defineConfig({
   plugins: [react()],
-  base: '/', 
-});
+})
