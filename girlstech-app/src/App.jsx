@@ -1,57 +1,84 @@
-// src/App.jsx
-import React, { useEffect, useRef } from 'react';
+// src/App.jsx - ESTRUTURA PRINCIPAL E ROTAS (COM ROTA /REGRAS)
+
+import React, { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom'; 
+
+// Importações dos componentes de UI
+import Header from './components/Header';
 import CtaSticky from './components/CtaSticky';
-import Hero from './components/Hero';
-import BenefitSection from './components/BenefitSection'; 
-import CtaFinal from './components/CtaFinal';
-// Certifique-se de que o seu index.js/main.jsx está importando o './styles.css'
+
+// Importações das páginas 
+import Home from './pages/homePage'; 
+import Blog from './pages/blogPage';
+import Regras from './pages/RegrasPage'; // NOVO: Página Regras
+import ArticleDetails from './pages/ArticleDetailsPage'; // Rota Dinâmica
+
+import './index.css'; // Estilos globais
 
 function App() {
   const whatsappLink = "https://chat.whatsapp.com/FLYgrWYHrZbBzP46fEBAd0";
   
-  // Lógica para o Efeito de Flutuação (Parallax/Float)
+  // ESTADO DE AUTENTICAÇÃO (Uso de state - Requisito do Professor)
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
+  const handleLogin = (status) => {
+    setIsLoggedIn(status); 
+  };
+
+  // Lógica de Efeito de Flutuação (Mantida)
   useEffect(() => {
     const handleScroll = () => {
-      const cards = document.querySelectorAll('.card');
+      const cards = document.querySelectorAll('.benefit-card');
       const scrollPosition = window.scrollY;
 
       cards.forEach((card, index) => {
-        const cardTop = card.getBoundingClientRect().top + window.scrollY;
+        const cardTop = card.getBoundingClientRect().top + scrollPosition;
         const windowHeight = window.innerHeight;
         
-        // Verifica se o card está na área de visualização
         if (cardTop < scrollPosition + windowHeight && cardTop + card.offsetHeight > scrollPosition) {
-          // Pequena transformação baseada no seno para um movimento suave
           const offset = scrollPosition + (index * 5); 
           card.style.transform = `translateY(${Math.sin(offset * 0.003) * 5}px)`;
+          card.classList.add('is-visible');
         } else {
-          // Reseta a posição quando fora da área (ou deixa levemente abaixado)
           card.style.transform = `translateY(0)`; 
+          card.classList.remove('is-visible');
         }
       });
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []); // O array vazio garante que o listener só seja criado na montagem
+  }, []); 
 
   return (
     <div className="App">
-      <CtaSticky />
-      <Hero />
+      
+      {/* HEADER com lógica de Login */}
+      <Header isLoggedIn={isLoggedIn} handleLogin={handleLogin} /> 
+      
+      {/* ROTAS (React Router - Requisito do Professor) */}
+      <Routes>
+        <Route path="/" element={<Home whatsappLink={whatsappLink} isLoggedIn={isLoggedIn} />} />
+        
+        {/* Rota crítica para o CRUD / Painel ADM */}
+        <Route 
+          path="/blog" 
+          element={<Blog 
+            whatsappLink={whatsappLink} 
+            isLoggedIn={isLoggedIn} 
+            handleLogin={handleLogin}
+          />} 
+        /> 
+        
+        {/* NOVA ROTA: Regras da Comunidade */}
+        <Route path="/regras" element={<Regras />} />
+        
+        {/* Rota DINÂMICA: Exibe um artigo específico pelo ID */}
+        <Route path="/blog/artigo/:id" element={<ArticleDetails />} /> 
+        
+      </Routes>
 
-      {/* Seção O Problema */}
-      <section className="problema">
-        <div className="container">
-          <h2>Não se perca no caminho.</h2>
-          <p>Sabemos que a jornada em tecnologia é desafiadora. Onde buscar apoio? Como fazer networking de forma segura? É fácil sentir ansiedade, desânimo ou solidão quando você não vê pessoas "iguais" ao seu lado.</p>
-          <p>Nossa missão é simples: garantir que nenhuma mulher se perca por falta de apoio e recursos. <a href={whatsappLink} className="link-cta">Junte-se a nós agora!</a></p>
-        </div>
-      </section>
-
-      <BenefitSection />
-
-      <CtaFinal />
+      <CtaSticky whatsappLink={whatsappLink} />
     </div>
   );
 }

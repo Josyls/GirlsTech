@@ -1,0 +1,92 @@
+{
+  "adms": [
+    {
+      "id": 1,
+      "nome": "Joseane Lelis",
+      "cargo": "Analista de Dados",
+      "bio": "Minha missão é garantir que nenhuma mulher se perca na jornada de TI por falta de apoio.",
+      "depoimento": "A Girls Tech é o ambiente seguro que eu gostaria de ter tido no início da minha carreira. Um espaço para crescermos juntas.",
+      "imagem_url": "/images/adm_josy.jpeg"
+    },
+    {
+      "id": 2,
+      "nome": "Rosito",
+      "cargo": "Desenvolvedora .NET",
+      "bio": "Sou Dev .Net e acredito que uma comunidade de Mulheres unidas pode garantir mais oportunidades, buscando equidade no mercado Tec",
+      "depoimento": "O networking aqui é real e focado! Vi muitas de nossas integrantes conseguirem o primeiro emprego ou transição de carreira.",
+      "imagem_url": "/images/adm_rosito.jpeg"
+    },
+    {
+      "id": 3,
+      "nome": "Olívia",
+      "cargo": "Analista de Dados",
+      "bio": "Onde mulheres se conectam, o conhecimento floresce e o erro vira Potência",
+      "depoimento": "Aqui me sinto livre pra errar, aprender ao lado de outras mulheres brilhantes",
+      "imagem_url": "/images/adm_olivia.jpeg"
+    },
+    {
+      "id": 4,
+      "nome": "Glorinha",
+      "cargo": "Engenheira de Software",
+      "bio": "Focada em backend e sistemas distribuídos. Minha especialidade é arquitetura de software escalável e eficiente.",
+      "depoimento": "Ver as meninas se desenvolvendo e quebrando barreiras é a minha maior inspiração diária e a prova de que estamos no caminho certo.",
+      "imagem_url": "/images/adm_glorinha.jpg"
+    }
+  ],
+  "participantes_depoimentos": [
+    {
+      "id": 101,
+      "nome": "Mayara",
+      "titulo": "Saber sobre Eventos de TI",
+      "texto": "Participar do Girls Tech me ajuda muito a saber de vagas de emprego, cursos e até mesmo eventos! E o mais bacana de tudo é que eu também consigo fazer network com várias mulheres incríveis.",
+      "avatar_url": "/images/avatar_may.jpg"
+    },
+    {
+      "id": 102,
+      "nome": "Isa",
+      "titulo": "Networking de verdade!",
+      "texto": "O grupo Girls tech é um grupo não só inclusivo mas de crescimento. Mulheres de diferentes contextos participam e partilham daquilo que elas têm vivido. É muito bom fazer parte de um lugar wue te levanta profissionalmente",
+      "avatar_url": "/images/avatar_isa.JPG"
+    },
+    {
+      "id": 103,
+      "nome": "Hellen Silva - Software Engineer",
+      "titulo": "Ambiente acolhedor",
+      "texto": "O grupo me ajudou com dicas sobre tecnologia, divulgação de eventos e é um ambiente acolhedor pois tem bastante mulheres e nesse mundo de tecnologia é difícil vermos mulheres na área, participem desse grupo pois é uma comunidade com um ambiente acolhedor, onde todas se ajudam com dúvidas, ótimo lugar pra para fazer networking e evoluir ",
+      "avatar_url": "/images/avatar_hellen.jpeg"
+    },
+    {
+      "id": 104,
+      "nome": "Gabi Almeida.",
+      "titulo": "Evolução",
+      "texto": "Participar do GirlsTech me faz perceber que nao estou sozinha nesse mundo predominante masculino. Aprendemos juntas e nos conectamos pra evoluirmos como profissionais e nos inspirar com mulheres que estão nessa área. Ajudamos também as jovens garotas a conhecerem e entrarem nesse mundo e ampliar suas visões sobre a area de tecnologia",
+      "avatar_url": "/images/avatar_gabi.jpeg"
+    }
+  ],
+  "artigos_blog": [
+    {
+      "id": 1001,
+      "titulo": "Os primeiros passos no React Hooks",
+      "autor": "Rosito",
+      "data": "2025-11-20",
+      "status": "Aprovado",
+      "conteudo": "Este é um artigo básico sobre React Hooks. Use o painel ADM para editar e inserir o conteúdo real."
+    },
+    {
+      "id": 1002,
+      "titulo": "Como superar a Síndrome da Impostora na TI",
+      "autor": "Joseane Lelis",
+      "data": "2025-11-22",
+      "status": "Aprovado",
+      "conteudo": "Este é o segundo artigo. Use o painel ADM para editar e inserir o conteúdo real."
+    },
+    {
+      "id": 46795,
+      "titulo": "Como conseguir um estágio em tecnologia (sem se perder no caminho)",
+      "autor": "Olívia Helena",
+      "data": "2025-11-30",
+      "status": "Aprovado",
+      "conteudo": "Arrumar um estágio em tech pode parecer uma verdadeira side quest do jogo da vida: você ainda está aprendendo, mas já pedem experiência; você é nova na área, mas querem que você saiba cinco linguagens, três frameworks e faça malabarismos com um notebook.Respira. Dá pra fazer isso com calma — e com estratégia.\n\n1) Seu currículo precisa falar a língua da área que você quer\nIndependente da área (dev, UX, QA, dados, cloud…), o recrutador vai procurar palavras-chave.\n* Se você é dev → HTML, CSS, JavaScript, Git, API…\n* UX → UX Research, prototipação, Figma, mapa de jornada…\n* QA → testes manuais, testes automatizados, casos de teste…\n* Dados → SQL, Python, BI, análise exploratória…\n* Cloud → AWS, GCP, Docker, Linux…\n\nNão inventa nada, claro. Mas coloque o que você realmente sabe ou ainda está aprendendo. Isso te faz aparecer nas buscas deles.\n\n2) O objetivo do currículo tem que ser direto\nSem aquelas frases genéricas tipo: “Busco oportunidade para expandir meus conhecimentos em um ambiente desafiador…” Isso não diz nada.\nPrefira algo como: “Busco estágio em <área> para atuar com <tarefas ou temas que você quer trabalhar>.” Simples e direto. Afinal, não é esse o seu objetivo?\n\n3) Não basta dizer que sabe — mostre isso\nIndependente da área, projeto é ouro.\n* Se é dev → um mini site, um CRUD, uma API simples.\n* UX → protótipo no Figma, case de redesign, estudo de usabilidade.\n* QA → plano de teste, relatório de bug, automação básica.\n* Dados → notebook com análise, dashboard, limpeza de dados.\n* Cloud → deploy simples, containerização, automação.\n\nE o mais importante: conecte as coisas.\n\n“Aprendi X no curso Y e apliquei em um projeto onde fiz Z.” Essa coerência encanta qualquer entrevistador — e é bem provável que desperte curiosidade e eles te perguntem sobre o projeto ou o curso.\n\n4) Stalkear o entrevistador faz parte do jogo\nAntes da entrevista: procura o nome da pessoa no LinkedIn, vê em que área ela trabalha, vê se ela posta algo, observa o estilo dela. Não é puxar saco — é criar contexto. E contexto deixa a conversa MUITO mais leve e gera conexão.\n\n5) Perguntas são obrigatórias, não opcionais\nQuando o entrevistador pergunta “tem alguma dúvida?”, ele não quer te livrar da entrevista. Ele quer ver se você realmente está interessada.\nAlgumas perguntas boas:\n* “Como é a rotina da equipe?”\n* “Quais ferramentas vocês usam no dia a dia?”\n* “Qual é o maior desafio desse estágio?”\n\nIsso demonstra que você tem interesse na empresa e na vaga, que já busca se ambientar e que já imagina uma rotina no estágio.\n\n6) A melhor pergunta da vida:\n“Como é a pessoa ideal para essa vaga?” Essa é a chave de ouro.\n\nQuando eles respondem, você:\n* entende exatamente o que estão buscando\n* consegue comentar pontos seus que combinam com o perfil\n\nExemplos: “Ah, vocês valorizam organização? Inclusive, no projeto X eu…” ou: “Procuram alguém curioso? Eu sempre faço projetos paralelos pra aprender coisas novas, como…” Funciona para qualquer área.\n\n7) Extras que SEMPRE ajudam\n* atividades extracurriculares (principalmente as que ajudam na comunicação)\n* adaptar o currículo para cada vaga\n* postar seus projetos no LinkedIn (mesmo simples!)\n* mostrar o processo, não só o resultado\n* lembrar que ninguém começa sabendo tudo\n\nE lembre-se, entrar em tech não é sobre ser genial ou ter todas as respostas.\nÉ sobre mostrar que você está construindo seu caminho com intenção, curiosidade e consistência."
+    }
+  ]
+}

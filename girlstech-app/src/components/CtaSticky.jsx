@@ -1,13 +1,22 @@
 // src/components/CtaSticky.jsx
 import React from 'react';
 
-function CtaSticky() {
-  const whatsappLink = "https://chat.whatsapp.com/FLYgrWYHrZbBzP46fEBAd0";
+function CtaSticky({ whatsappLink }) {
+  // Ícone simples de WhatsApp (pode ser substituído por um SVG ou Font Awesome se tiver)
+  const WhatsAppIcon = "💬"; 
 
   return (
-    <a href={whatsappLink} id="cta-sticky" className="cta-btn">
-      Quero Entrar (GRÁTIS!) 🚀
-    </a>
+    <div className="cta-sticky">
+      <a 
+        href={whatsappLink} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="cta-sticky-button"
+        title="Fale conosco no WhatsApp (Comunidade Gratuita)"
+      >
+        {WhatsAppIcon}
+      </a>
+    </div>
   );
 }
 

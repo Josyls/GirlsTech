@@ -1,16 +1,30 @@
 // src/components/BenefitCard.jsx
 import React from 'react';
 
-function BenefitCard({ icon, title, description, index }) {
-  // Hook para o efeito de flutuação (opcional, requer JS na App.jsx)
-  const cardRef = React.useRef(null);
-  
-  // O estilo de flutuação será aplicado no App.jsx usando useEffect para interagir com a rolagem
+// Recebe as propriedades (props) que foram passadas no App.jsx
+function BenefitCard({ icon, title, description, whatsappLink }) {
   
   return (
-    <div className="card" ref={cardRef}>
-      <h3>{icon} {title}</h3>
+    <div className="benefit-card parallax-effect">
+      
+      {/* Ícone */}
+      <div className="benefit-card-icon">{icon}</div>
+      
+      {/* Título e Descrição */}
+      <h3>{title}</h3>
       <p>{description}</p>
+      
+      {/* Botão de Saiba Mais que redireciona para o WhatsApp */}
+      <div style={{ marginTop: 'auto', paddingTop: '15px' }}>
+        <a 
+          href={whatsappLink} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          style={{ color: '#FF78A6', fontWeight: 'bold' }}
+        >
+          Saber Mais e Entrar →
+        </a>
+      </div>
     </div>
   );
 }
